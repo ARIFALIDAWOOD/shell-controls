@@ -1,0 +1,98 @@
+{
+  "$schema": "./schema/config.schema.json",
+  "version": "2.0.0",
+  "theme": "catppuccin",
+  "settings": {
+    "unicode": true,
+    "animations": true,
+    "animationSpeed": 50,
+    "sounds": false,
+    "logLevel": "info",
+    "logFile": null,
+    "clearScreenOnStart": true,
+    "showBreadcrumbs": true,
+    "confirmDestructiveActions": true
+  },
+  "keybindings": {
+    "global": {
+      "quit": ["Ctrl+C", "Ctrl+Q"],
+      "help": ["F1", "?"]
+    },
+    "menu": {
+      "up": ["UpArrow", "k"],
+      "down": ["DownArrow", "j"],
+      "pageUp": ["PageUp"],
+      "pageDown": ["PageDown"],
+      "home": ["Home"],
+      "end": ["End"],
+      "select": ["Enter", "Spacebar"],
+      "back": ["Escape", "Backspace", "q"],
+      "search": ["Ctrl+F", "/"]
+    },
+    "input": {
+      "submit": ["Enter"],
+      "cancel": ["Escape"],
+      "clear": ["Ctrl+U"],
+      "historyPrev": ["UpArrow"],
+      "historyNext": ["DownArrow"]
+    },
+    "form": {
+      "nextField": ["Tab"],
+      "prevField": ["Shift+Tab"],
+      "submit": ["Ctrl+Enter"],
+      "cancel": ["Escape"]
+    }
+  },
+  "defaults": {
+    "menuStyle": "boxed",
+    "progressStyle": "blocks",
+    "spinnerStyle": "dots",
+    "tableStyle": "rounded",
+    "layout": {
+      "maxWidth": 0,
+      "minWidth": 20,
+      "padding": 1,
+      "margin": 0,
+      "align": "Left",
+      "overflow": "Ellipsis"
+    }
+  },
+  "components": {
+    "panel": {
+      "minWidth": 40,
+      "padding": 1,
+      "margin": 2,
+      "style": "rounded"
+    },
+    "card": {
+      "minWidth": 40,
+      "padding": 1,
+      "margin": 2,
+      "style": "rounded"
+    },
+    "table": {
+      "minWidth": 40,
+      "margin": 2,
+      "style": "rounded"
+    },
+    "stack": {
+      "gap": 1
+    },
+    "grid": {
+      "minCellWidth": 20,
+      "gap": 2,
+      "rowGap": 1
+    },
+    "banner": {
+      "margin": 2,
+      "font": "block"
+    }
+  },
+  "responsive": {
+    "breakpoints": {
+      "sm": 60,
+      "md": 100,
+      "lg": 140
+    }
+  }
+}
