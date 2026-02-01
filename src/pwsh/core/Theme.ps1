@@ -40,6 +40,9 @@ function Set-SCTheme {
     if ($CustomTheme) {
         $script:Theme = $CustomTheme
         $script:ThemeOverrides = @{}
+    } elseif ([string]::Equals($Name, "default", [StringComparison]::OrdinalIgnoreCase)) {
+        $script:Theme = Get-DefaultTheme
+        $script:ThemeOverrides = @{}
     } else {
         $themePath = Join-Path $script:ConfigPath "themes\$Name.json"
 

@@ -92,7 +92,7 @@ function Initialize-ShellControls {
     [CmdletBinding()]
     param(
         [Parameter()]
-        [string]$ThemeName = "catppuccin",
+        [string]$ThemeName = "default",
 
         [Parameter()]
         [string]$ConfigPath,
@@ -114,7 +114,7 @@ function Initialize-ShellControls {
     } else {
         $script:Config = @{
             version  = "1.0.0"
-            theme    = $ThemeName
+            theme    = "default"
             settings = @{
                 unicode                    = $true
                 animations                 = $true
@@ -148,6 +148,6 @@ function Initialize-ShellControls {
     Write-Verbose "Shell-Controls initialized with theme: $($script:Theme.name)"
 }
 
-Initialize-ShellControls -ThemeName "catppuccin"
+Initialize-ShellControls -ThemeName "default"
 
 Export-ModuleMember -Function * -Alias *

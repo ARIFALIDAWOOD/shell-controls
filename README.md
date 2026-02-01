@@ -87,7 +87,7 @@ Initialize-ShellControls -ThemeName catppuccin
 Write-SCSuccess "Operation completed"
 Write-SCError "Something went wrong"
 
-# Banner
+# Banner (optional: Install-Module Figlet for richer ASCII fonts)
 Show-SCBanner -Text "MyApp" -Subtitle "v2.0.0"
 
 # Card layout
@@ -112,6 +112,18 @@ Show-SCGrid -Columns 2 -Children {
 
 ```bash
 ./install.sh
+```
+
+### Basic setup (PowerShell)
+
+One-time setup to trust PSGallery and optionally install Figlet for richer ASCII banners:
+
+```powershell
+# Trust PSGallery (avoids "untrusted repository" prompt)
+Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
+# Optional: Figlet for Show-SCBanner / Write-Figlet (use -AllowClobber if Pansies conflicts with Write-Host)
+Install-Module Figlet -Scope CurrentUser -AllowClobber -Force
 ```
 
 ## Project Structure
